@@ -10,14 +10,16 @@ import Home from './components/home/Home.jsx';
 import About from './About.jsx';
 import Contact from './components/home/Contact.jsx';
 import Users from './components/home/Users.jsx';
-import User from './components/home/User/User.jsx';
+
 import UserDetails from './components/home/User/UserDetails.jsx';
+import ErrorPage from './components/ErrorPage.jsx';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home></Home>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/about",
@@ -26,6 +28,7 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact></Contact>
+      
       }
       ,
       {
